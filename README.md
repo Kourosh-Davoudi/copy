@@ -1,50 +1,49 @@
 ## The warm-up activity
 
 Leaning outcomes highlights: 
-- Basic control flow in C++
-- Functional programming in C++
-- C-style strings
+- using command line argument
+- file operations
 
-**Problem:** Write a function to determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward (e.g., 356653, 49894). Call this function in a program which reads an integer and outputs an appropriate message.  
+**Problem:** Write a program to get the two files name as command line arguments and create/copy the first file contents to the second file. The name of program is mycp.cpp, so the execution should be like:
+
+./mycp file1 file2 (create file 2 and copy file1 contents to the file 2)
 
 
 ```C++
-#include <iostream>
-#include <cstring>
-
-using namespace std;
-
-bool isPalindrome(int);
-
-int main()
+int main(int argc, char const *argv[])
 {
-  int x;
-  cout << "Enter a positive number:";
-  cin >> x;
-  
-  if(isPalindrome(x))
-    cout << "The number is palindrome" << endl;
-  else
-    cout << "The number is NOT palindrome" << endl;
-    
-  return 0;
-}
+ 	ifstream fin;
+ 	ofstream fout;
 
-bool isPalindrome(int x)
-{
-	char a[10];
-	int i;
-	
-	// put the digit characters of x in array a (in reverse order is fine)
-	
-	// your code is here
+ 	fin.open(argv[1]);
 
-	a[i] = '\0';
+ 	char c;
 
-	// check if the palindrome number condition is violated (return false) 
-	
-	// your code is here
-	
-	return true;
-}
+ 	if (fin.fail()) // check if it is successful 
+ 	{
+ 		cerr << " Cannot open the input file!" << endl;
+ 		return 1;
+ 	}
+ 	
+
+ 	fout.open(argv[2]);
+ 	if (fout.fail())
+ 	{
+ 		cerr << " Cannot open the output file!" << endl;
+ 		return 1;
+ 	}
+ 	
+ 	while(fin.get(c)) 
+	{
+		//fin >> c;		
+		fout << c;
+	}
+ 	
+ 	fin.close(); 
+
+ 	fout.close();
+
+ 	 return 0;
+
+ } 
 ```
