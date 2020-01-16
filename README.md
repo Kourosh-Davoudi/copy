@@ -16,7 +16,7 @@ int main(int argc, char const *argv[])
  	ifstream fin;
  	ofstream fout;
 	
-	// check if there is enough arguments
+	// check if there are enough arguments
 	
 	
 	// open the first file
