@@ -1,7 +1,7 @@
 ## The warm-up activity
 
 Leaning outcomes highlights: 
-- using command line argument
+- using command line arguments
 - file operations
 
 **Problem:** Write a program to get the two file name as command-line arguments and create/copy the first file contents to the second file. The name of the program is mycp.cpp, so the execution should be like:
