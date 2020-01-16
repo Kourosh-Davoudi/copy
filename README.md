@@ -40,7 +40,6 @@ int main(int argc, char const *argv[])
  	
  	while(fin.get(c)) 
 	{
-		//fin >> c;		
 		fout << c;
 	}
  	
