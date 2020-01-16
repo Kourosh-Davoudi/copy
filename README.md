@@ -1,4 +1,4 @@
-## The warm-up activity
+## copy file
 
 Leaning outcomes highlights: 
 - using command line arguments
