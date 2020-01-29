@@ -1,6 +1,6 @@
 ## Copy File programs
 
-Leaning outcomes highlights: 
+Learning outcomes highlights: 
 - using command line arguments
 - file operations
 
